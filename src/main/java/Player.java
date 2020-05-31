@@ -26,4 +26,14 @@ public class Player {
     public void clearHand() {
         this.hand.clear();
     }
+
+    public String displayHand() {
+        String handString = "";
+        for (Card card : this.hand){
+            String suit = card.getSuit().toString();
+            String rank = card.getRank().toString();
+            handString += rank + " of " + suit + ", ";
+        }
+        return handString;
+    }
 }

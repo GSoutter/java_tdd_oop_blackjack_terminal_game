@@ -40,4 +40,11 @@ public class PlayerTest {
         assertEquals(0, player.getHand().size());
     }
 
+    @Test
+    public void canDisplayHand(){
+        player.addCard(card);
+        player.addCard(card);
+        assertEquals("ACE of HEARTS, ACE of HEARTS, ", player.displayHand());
+    }
+
 }
